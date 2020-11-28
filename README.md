@@ -4,6 +4,7 @@
 
 ### (MVC Architure means Model-View-Controller)
 
+### Contributer : 1
 
 If you want to contribute my project, don't hesitate just do it. I need you. 
 
