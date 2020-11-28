@@ -1,6 +1,6 @@
 # Ping-Pong game
 
-### This project is design and make a simple ping-pong game in java language with MVC Architecture.
+### This project's goal is designing and making a simple ping-pong game in java language with MVC Architecture.
 
 ### (MVC Architure means Model-View-Controller)
 
