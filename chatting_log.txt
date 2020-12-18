@@ -1,0 +1,32 @@
+2020-12-14 Second Commit
+
+oh0227(REVIEWER)
+: You did well. But, I think you need to make this program faster....
+Finally, I wish I could move the racket with the user's mouse. Good Luck 👍
+
+oh0227(DEVELOPER) 
+: Okay, I'll give it a try.
+
+2020-12-16 Initial Commit
+
+oh0227(REVIEWER)
+: Wow. What a genius!! 👍
+One thing that's unfortunate is that I can't see the ball well. I think it would be better to change the background color.
+
+oh0227(DEVELOPER) 
+: Okay
+
+2020-12-19 Initial Commit
+oh0227(REVIEWER)
+: Good!! 👍
+But, I think you'd better use GUI(Graphical User Interface) for user's convenience.
+
+oh0227(DEVELOPER) 
+: Okay ~.
+I understand.
+
+2020-12-19 Second Commit
+oh0227(REVIEWER)
+: Good!
+But, I'm still unsatisfied. Because, The ping-pong game rules didn't apply.
+Please, apply it
