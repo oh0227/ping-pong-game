@@ -2,27 +2,28 @@ import java.awt.*;
 import javax.swing.*;
 
 public class GameFrame extends JFrame{
-	private AnimationWriter animation;
-	private NetWriter net;
-	private RacketWriter racket;
-	private BallWriter ballwriter;
-	private AnimationController controller;
 	
 	public GameFrame() {
+		Net net = new Net();
+		Ball ball = new Ball(net);
+		Racket racket = new Racket();
+		Racket_AI racket_ai = new Racket_AI(ball, net);
+		RacketWriter rwriter = new RacketWriter(racket, racket_ai);
+		NetWriter nwriter = new NetWriter(net);
+		BallWriter bwriter = new BallWriter(ball);
+		AnimationWriter aw = new AnimationWriter(ball, racket, net, nwriter, rwriter, bwriter);
 		Container cp = getContentPane();
 		cp.setLayout(new BorderLayout());
-		JPanel p = new JPanel();
-		p.add(animation);
-		setTitle("Bounce");
-		setSize(600, 700);
+		cp.add(aw,BorderLayout.CENTER);
+		JPanel p = new JPanel(new FlowLayout());
+		p.add(new ExitButton("Exit"));
+		cp.add(p, BorderLayout.SOUTH);
+		setTitle("Ping-Pong!");
+		setSize(net.fwidthOf(),net.fheightOf());
 		setVisible(true);
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		controller.runAnimation();
+		new AnimationController(ball, racket, racket_ai, aw).runAnimation();
 	}
 	
-	/** 공과 라켓의 상태를 업데이트 */ 
-	public void update() {
-		
-	}
 
 }

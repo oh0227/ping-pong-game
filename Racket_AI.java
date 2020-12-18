@@ -11,13 +11,18 @@ public class Racket_AI extends Racket{
 	public Racket_AI(Ball b, Net n) {
 		ball = b;
 		net = n;
-		racket_x_pos = net.widthOf();
-		racket_y_pos = ball.yPosition()-100;
+		racket_x_pos = net.widthOf()-10;
+		racket_y_pos = ball.yPosition();
 	}
 
 	
 	public void update() {
-		racket_y_pos = ball.yPosition()-100;
+		if(ball.yPosition() > net.fheightOf()/8)
+			racket_y_pos = ball.yPosition()+30;
+		else if(ball.yPosition() < net.fheightOf()/8) 
+			racket_y_pos = ball.yPosition()-30;
+		else 
+			racket_y_pos = ball.yPosition();
 	}
 	
 

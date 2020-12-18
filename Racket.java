@@ -8,8 +8,8 @@ public class Racket{
 	private int RACKET_WIDTH = 50;
 	
 	public Racket() {
-		racket_x_pos = 30;
-		racket_y_pos = 0;
+		racket_x_pos = 50;
+		racket_y_pos = 500;
 	}
 
 	

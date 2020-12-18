@@ -1,5 +1,4 @@
-import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.*;
 
 /** BallWriter - 움직이는 공을 그림 */
 public class BallWriter {
