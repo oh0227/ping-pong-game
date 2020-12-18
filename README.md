@@ -1,6 +1,6 @@
 # Ping-Pong game
 
-### In the current situation where people cannot enjoy sports due to COVID-19, this program is to make it simple to enjoy sports at home 
+### In the current situation where people cannot enjoy outdoor sports due to COVID-19, this program is to make it simple to enjoy sports at home 
 
 ### This project's goal is designing and making a simple ping-pong game in java language with MVC Architecture.
 
