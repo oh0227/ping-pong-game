@@ -1,23 +1,24 @@
 
-import java.awt.event.*;
 
-public class Racket{
+public class Racket_AI extends Racket{
 	
+	private Ball ball;
+	private Net net;
 	private int racket_x_pos;
 	private int racket_y_pos;
 	private int RACKET_WIDTH = 50;
 	
-	public Racket() {
-		racket_x_pos = 30;
-		racket_y_pos = 0;
+	public Racket_AI(Ball b, Net n) {
+		ball = b;
+		net = n;
+		racket_x_pos = net.widthOf();
+		racket_y_pos = ball.yPosition()-100;
 	}
 
 	
-	public void update(MouseEvent e) {
-		racket_x_pos = e.getX();
-		racket_y_pos = e.getY();
+	public void update() {
+		racket_y_pos = ball.yPosition()-100;
 	}
-	
 	
 
 	public int xPosOf() {

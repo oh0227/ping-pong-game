@@ -6,21 +6,27 @@ import javax.swing.*;
 
 public class AnimationWriter extends JPanel implements MouseMotionListener{
 	
+	private Ball ball;
+	private Racket racket1;
+	private Racket_AI racket2;
+	private Net net;
 	private NetWriter net_writer;
 	private RacketWriter racket_writer;
-	private Racket racket;
 	private BallWriter ball_writer;
 	
 	
-	public AnimationWriter(Racket ra, NetWriter n, RacketWriter r,BallWriter l) {
-		racket = ra;
-		net_writer = n;
+	public AnimationWriter(Ball b, Racket ra1, Racket_AI ra2, Net n, NetWriter nw, RacketWriter r,BallWriter l) {
+		ball = b;
+		racket1 = ra1;
+		racket2 = ra2;
+		net = n;
+		net_writer = nw;
 		racket_writer = r;
 		ball_writer = l;
 		JFrame f = new JFrame();
 		f.getContentPane().add(this);
 		f.setTitle("Ping-Pong!");
-		f.setSize(1512,770);
+		f.setSize(net.widthOf()+net.widthOf()/8,net.heightOf()+net.heightOf()/3);
 		f.setVisible(true);
 		f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		addMouseMotionListener(this); 
@@ -36,11 +42,10 @@ public class AnimationWriter extends JPanel implements MouseMotionListener{
 	}
 	
 	public void mouseDragged(MouseEvent e) {  
-//	    g.setColor(Color.BLUE);  
-//	    g.fillOval(e.getX(),e.getY(),20,20);  
-//	    new RacketWriter(new Racket(e.getX(),e.getY()));
+		ball.restart(e);
 	}  
 	public void mouseMoved(MouseEvent e) {
-		racket.update(e);
+		racket2.update();
+		racket1.update(e);
 	}  
 }

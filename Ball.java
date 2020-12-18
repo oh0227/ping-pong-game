@@ -1,3 +1,4 @@
+import java.awt.event.*;
 
 public class Ball {
 	private int x_pos;
@@ -7,11 +8,9 @@ public class Ball {
 	private int x_velocity;
 	private int y_velocity;
 	
-	private Racket racket;
 	private Net net;
 	
-	public Ball(Racket rck, Net n, int x_initial, int y_initial,  int x_init_velocity, int y_init_velocity) {
-		racket = rck;
+	public Ball(Net n, int x_initial, int y_initial,  int x_init_velocity, int y_init_velocity) {
 		net = n;
 		x_pos = x_initial;
 		y_pos = y_initial;
@@ -34,6 +33,11 @@ public class Ball {
 			x_velocity = - x_velocity;
 			y_velocity = - y_velocity;
 		}
+		net.scoring(x_pos, y_pos);
+	}
+	public void restart(MouseEvent e) {
+		x_pos = 0;
+		y_pos = 0;
 	}
 	
 	public int xPosition() {
