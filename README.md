@@ -6,7 +6,8 @@
 
 ### (MVC Architure means Model-View-Controller)
 
-### Contributer : 1
+### Contributer : 1 (oh0227)
+review contributer : Kyung-Min Kim, Jae-Young Ji, Jin-Woo Han
 
 If you want to contribute my project, don't hesitate just do it. I need you. 
 
